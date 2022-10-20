@@ -1,0 +1,9 @@
+[api]
+port = "9000"
+
+[database]
+host = "127.0.0.1"
+user = "test"
+pass = "Post_1212"
+name = "api_publisher"
+port = "5432"
