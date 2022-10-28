@@ -6,8 +6,8 @@ type Publisher struct {
 	Name        string `json:"name"`
 	BirthDate   int64  `json:"birthdate"`
 	BaptismDate int64  `json:"baptismdate"`
-	OtherSheep  bool   `json:"othersheep"`
-  Elder bool `json:"elder"`
-  MinisterialServant bool `json:"ministerialservant"`
-  RegularPionner bool `json:"regularpionner"`
+  OtherSheep  bool   `json:"othersheep" default:"true"`
+  Elder bool `json:"elder" default:"false"`
+  MinisterialServant bool `json:"ministerialservant" default:"false"`
+  RegularPionner bool `json:"regularpionner" default:"false"`
 }
