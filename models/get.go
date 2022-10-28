@@ -10,6 +10,6 @@ func Get(id int64) (publisher Publisher, err error) {
 	defer conn.Close()
 
 	row := conn.QueryRow(`SELECT * FROM publishers WHERE id=$1`, id)
-	err = row.Scan(&publisher.ID, &publisher.Name, &publisher.BirthDate, &publisher.BaptismDate, &publisher.OtherSheep)
+	err = row.Scan(&publisher.ID, &publisher.Surname, &publisher.Name, &publisher.BirthDate, &publisher.BaptismDate, &publisher.OtherSheep, &publisher.Elder, &publisher.MinisterialServant, &publisher.RegularPionner)
 	return
 }

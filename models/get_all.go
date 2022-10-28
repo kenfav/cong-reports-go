@@ -16,7 +16,7 @@ func GetAll() (publishers []Publisher, err error) {
 	for rows.Next() {
 		var publisher Publisher
 
-		err = rows.Scan(&publisher.ID, &publisher.Name, &publisher.BirthDate, &publisher.BaptismDate, &publisher.OtherSheep)
+		err = rows.Scan(&publisher.ID, &publisher.Surname, &publisher.Name, &publisher.BirthDate, &publisher.BaptismDate, &publisher.OtherSheep, &publisher.Elder, &publisher.MinisterialServant, &publisher.RegularPionner)
 		if err != nil {
 			continue
 		}

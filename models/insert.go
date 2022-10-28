@@ -9,8 +9,8 @@ func Insert(publisher Publisher) (id int64, err error) {
 	}
 	defer conn.Close()
 
-	sql := `INSERT INTO publishers (name, birthdate, baptismdate, othersheep) VALUES ($1, $2, $3, $4) RETURNING id`
+	sql := `INSERT INTO publishers (surname, name, birthdate, baptismdate, othersheep, elder, ministerialservant, regularpionner) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id`
 
-	err = conn.QueryRow(sql, publisher.Name, publisher.BirthDate, publisher.BaptismDate, publisher.OtherSheep).Scan(&id)
+	err = conn.QueryRow(sql, publisher.Surname, publisher.Name, publisher.BirthDate, publisher.BaptismDate, publisher.OtherSheep, publisher.Elder, publisher.MinisterialServant, publisher.RegularPionner).Scan(&id)
 	return
 }

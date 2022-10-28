@@ -3,7 +3,7 @@ port = "9000"
 
 [database]
 host = "127.0.0.1"
-user = "test"
+user = "postgres"
 pass = "Post_1212"
-name = "api_publisher"
+name = "default_database"
 port = "5432"
