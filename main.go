@@ -19,6 +19,7 @@ func main() {
 	r.Put("/{id}", handler.Update)
 	r.Delete("/{id}", handler.Delete)
 	r.Get("/", handler.List)
+  r.Get("/{id}/reports/{year}/{month}", handler.GetReportByMonth)
   r.Get("/{id}/reports", handler.ListAllReports)
 	r.Get("/{id}", handler.Get)
 
